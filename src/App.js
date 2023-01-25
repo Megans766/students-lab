@@ -1,16 +1,22 @@
 import './App.css';
 import { studentList } from './data'
 import { useState } from 'react'
-import StudentList from './StudentList';
+import Student from './Student';
 
 function App() {
-  const [studentData, setStudentData] = useState(studentList)
+  const [students, setStudentData] = useState(studentList)
+
+  function handleShowMore() {
+    
+  }
   
   return (
     <div className="App">
-      <StudentList students={studentData}/>
+      {students.map(student =>
+        <Student key={student.name} student={student} />
+      )}
     </div>
   );
 }
 
-export default App;
+export default App
