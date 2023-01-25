@@ -5,14 +5,10 @@ import Student from './Student';
 
 function App() {
   const [students, setStudentData] = useState(studentList)
-
-  function handleShowMore() {
-    
-  }
   
   return (
-    <div className="App">
-      {students.map(student =>
+    <div className='App'>
+      {students.map(student => 
         <Student key={student.name} student={student} />
       )}
     </div>

@@ -1,4 +1,5 @@
 const Score = (props) => {
+
   return (
     <>
       <h3>Score Date: {props.score.date}</h3>
